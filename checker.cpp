@@ -26,7 +26,7 @@ char solve(string id)
 void calc()
 {
     string id;
-    cout<<"请输入身份证号码前17位数字"<<'\n';
+    cout<<"请输入身份证号码前17位数字:"<<'\n';
     cin>>id;
     bool right=ck(id);
     while((right!=true) || (id.length()!=17))
@@ -35,14 +35,14 @@ void calc()
         cin>>id;
         right=ck(id);
     }
-    cout<<"校验码为"<<solve(id)<<'\n';
-    system("pause");
+    cout<<"校验码为"<<solve(id);
+    system("pause>nul");
 }
 
 void check()
 {
     string id;
-    cout<<"请输入身份证号码"<<'\n';
+    cout<<"请输入身份证号码:"<<'\n';
     cin>>id;
     bool right=ck(id);
     while((right!=true) || (id.length()!=18))
@@ -52,9 +52,9 @@ void check()
         right=ck(id);
     }
     char a=solve(id);
-    if(a==id[17])cout<<"该身份证号正确"<<'\n';
-    else cout<<"该身份证号不正确,校验码应为"<<a<<'\n';
-    system("pause");
+    if(a==id[17])cout<<"该身份证号正确";
+    else cout<<"该身份证号不正确,校验码应为"<<a;
+    system("pause>nul");
 }
 
 int main()
